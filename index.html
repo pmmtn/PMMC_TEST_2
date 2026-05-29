@@ -1000,77 +1000,125 @@ filter: blur(22px);
 /* Creative sensibility compact split layout */
 .creative-layout {
   display: grid;
-  grid-template-columns: 360px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(360px, 1fr);
   gap: 72px;
   align-items: center;
   margin-top: 8px;
 }
 
 .creative-copy {
-  max-width: 360px;
+  max-width: 760px;
+}
+
+.creative-copy .display {
+  max-width: 720px;
 }
 
 .creative-copy .body-md {
   margin-top: 0;
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 .creative-quote-inline {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: clamp(24px, 2.2vw, 36px);
   font-weight: 400;
   font-style: italic;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   color: var(--text);
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 56px;
+  margin-bottom: 32px;
+  max-width: 680px;
 }
 
 .creative-layout .worlds-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 0;
-  gap: 16px;
+  gap: 14px;
   border-radius: 0;
   overflow: visible;
 }
 
 .creative-layout .world-card {
-  aspect-ratio: 1.45 / 1;
-  border-radius: 28px;
+  aspect-ratio: 1.35 / 1;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.creative-layout .world-img {
+  filter: grayscale(18%) brightness(0.62);
+}
+
+.creative-layout .world-card:hover .world-img {
+  transform: scale(1.06);
+  filter: grayscale(0%) brightness(0.54);
+}
+
+.creative-layout .world-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.78) 0%,
+    rgba(0,0,0,0.38) 42%,
+    rgba(0,0,0,0.10) 100%
+  );
 }
 
 .creative-layout .world-content {
-  bottom: 34px;
-  padding: 0 28px;
+  bottom: 24px;
+  padding: 0 22px;
+}
+
+.creative-layout .world-num {
+  font-size: 10px;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.48);
 }
 
 .creative-layout .world-title {
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .creative-layout .world-phrase {
-  left: 28px;
-  right: 28px;
-  font-size: 11px;
+  position: static;
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
   line-height: 1.45;
+  color: rgba(255,255,255,0.72);
+  opacity: 1;
+  transform: none;
+  pointer-events: none;
+}
+
+.creative-layout .world-card:hover .world-content {
+  transform: translateY(-2px);
+}
+
+.creative-layout .world-card:hover .world-phrase {
+  opacity: 1;
+  transform: none;
 }
 
 @media (max-width: 1100px) {
   .creative-layout {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 48px;
   }
 
   .creative-copy {
-    max-width: 620px;
+    max-width: 720px;
   }
 
   .creative-layout .worlds-grid {
+    max-width: 720px;
     grid-template-columns: repeat(2,1fr);
   }
 }
@@ -1847,12 +1895,22 @@ footer a:hover { color: var(--red); }
 
 <section class="section">
   <div class="creative-layout">
-    <div class="creative-copy">
-      <div class="label">Creative sensibility</div>
-      <h2 class="display" style="margin-bottom:12px">What feeds<br><em>my creativity.</em></h2>
-         <p class="creative-quote-inline">
-           I have always been drawn to things that feel right before they need to be explained.
-         </p>
+<div class="creative-copy">
+  <div class="label">Creative sensibility</div>
+
+  <h2 class="display" style="margin-bottom:12px">
+    What feeds<br><em>my creativity.</em>
+  </h2>
+
+  <p class="creative-quote-inline">
+    I have always been drawn to things that feel right before they need to be explained.
+  </p>
+
+  <p class="body-md">
+    My inspiration does not only come from design. It comes from the way I look at spaces, scents, images and moments of distance.
+  </p>
+</div>
+         
          
          <p class="body-md">
            My inspiration does not only come from design. It comes from the way I look at spaces, scents, images and moments of distance.
