@@ -1043,13 +1043,12 @@ filter: blur(22px);
   justify-content: flex-end;
   position: absolute;
 }
-
 .creative-layout .world-num {
   font-size: 9px;
   letter-spacing: 0.18em;
   margin-bottom: 5px;
   color: rgba(255,255,255,0.55);
-  transition: opacity 0.3s ease;
+  transition: opacity 0.45s ease, filter 0.45s ease;
 }
 
 .creative-layout .world-title {
@@ -1059,7 +1058,7 @@ filter: blur(22px);
   letter-spacing: -0.01em;
   line-height: 1.2;
   color: #fff;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.45s ease, filter 0.45s ease;
 }
 
 .creative-layout .world-phrase {
@@ -1074,17 +1073,20 @@ filter: blur(22px);
   color: rgba(255,255,255,0.85);
   line-height: 1.55;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  filter: blur(6px);
+  transition: opacity 0.45s ease, filter 0.45s ease;
   pointer-events: none;
 }
 
 .creative-layout .world-card:hover .world-num,
 .creative-layout .world-card:hover .world-title {
   opacity: 0;
+  filter: blur(6px);
 }
 
 .creative-layout .world-card:hover .world-phrase {
   opacity: 1;
+  filter: blur(0px);
 }
    
 @media (max-width: 1100px) {
