@@ -1000,81 +1000,70 @@ filter: blur(22px);
 /* Creative sensibility compact split layout */
 .creative-layout {
   display: grid;
-  grid-template-columns: 360px minmax(0, 1fr);
-  gap: 72px;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 64px;
   align-items: center;
   margin-top: 8px;
 }
-
 .creative-copy {
-  max-width: 360px;
+  max-width: 340px;
 }
-
-.creative-copy .body-md {
-  margin-top: 0;
-}
-
 .creative-quote-inline {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 400;
   font-style: italic;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
   color: var(--text);
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 20px;
+  margin-bottom: 18px;
 }
-
 .creative-layout .worlds-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 0;
-  gap: 16px;
+  gap: 12px;
   border-radius: 0;
   overflow: visible;
 }
-
 .creative-layout .world-card {
-  aspect-ratio: 1.45 / 1;
-  border-radius: 28px;
+  aspect-ratio: 1.6 / 1;
+  border-radius: 20px;
 }
-
 .creative-layout .world-content {
-  bottom: 34px;
-  padding: 0 28px;
+  bottom: 22px;
+  padding: 0 20px;
 }
-
 .creative-layout .world-title {
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
-
+.creative-layout .world-num {
+  font-size: 9px;
+  margin-bottom: 8px;
+}
 .creative-layout .world-phrase {
-  left: 28px;
-  right: 28px;
+  left: 20px;
+  right: 20px;
   font-size: 11px;
   line-height: 1.45;
 }
-
 @media (max-width: 1100px) {
   .creative-layout {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-
   .creative-copy {
     max-width: 620px;
   }
-
   .creative-layout .worlds-grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 560px) {
   .creative-layout .worlds-grid {
     grid-template-columns: 1fr;
