@@ -1064,10 +1064,12 @@ filter: blur(22px);
 .creative-layout .world-phrase {
   display: block;
   position: absolute;
-  top: 50%;
+  top: 14px;
+  bottom: 14px;
   left: 14px;
   right: 14px;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
   font-size: 12px;
   font-weight: 300;
   color: rgba(255,255,255,0.85);
@@ -1076,6 +1078,7 @@ filter: blur(22px);
   filter: blur(8px);
   transition: opacity 0.8s ease-in-out, filter 0.8s ease-in-out;
   pointer-events: none;
+  transform: none;
 }
 
 .creative-layout .world-card:hover .world-num,
