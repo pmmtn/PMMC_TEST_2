@@ -1000,57 +1000,59 @@ filter: blur(22px);
 /* Creative sensibility compact split layout */
 .creative-layout {
   display: grid;
-  grid-template-columns: 380px minmax(0, 1fr);
-  gap: 64px;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 56px;
   align-items: center;
   margin-top: 8px;
 }
 .creative-copy {
-  max-width: 380px;
+  max-width: 320px;
 }
 .creative-quote-inline {
   font-family: 'Playfair Display', serif;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 400;
   font-style: italic;
   line-height: 1.4;
   letter-spacing: -0.015em;
   color: var(--text);
-  margin-top: 20px;
-  margin-bottom: 18px;
+  margin-top: 16px;
+  margin-bottom: 14px;
 }
 .creative-layout .worlds-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 160px);
   margin-top: 0;
   gap: 10px;
   border-radius: 0;
   overflow: visible;
 }
 .creative-layout .world-card {
-  aspect-ratio: 4 / 3;
-  border-radius: 24px;
+  aspect-ratio: unset;
+  height: 160px;
+  border-radius: 20px;
 }
 .creative-layout .world-content {
-  bottom: 18px;
-  padding: 0 18px;
+  bottom: 16px;
+  padding: 0 16px;
 }
 .creative-layout .world-title {
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
 .creative-layout .world-num {
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.18em;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   color: rgba(255,255,255,0.55);
 }
 .creative-layout .world-phrase {
-  left: 18px;
-  right: 18px;
+  left: 16px;
+  right: 16px;
   font-size: 11px;
   line-height: 1.45;
 }
@@ -1062,12 +1064,14 @@ filter: blur(22px);
   .creative-copy { max-width: 620px; }
   .creative-layout .worlds-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .creative-layout .world-card {
+    height: 160px;
   }
 }
 @media (max-width: 560px) {
-  .creative-layout .worlds-grid {
-    grid-template-columns: 1fr;
-  }
+  .creative-layout .worlds-grid { grid-template-columns: 1fr; }
 }
    
 /* ════════════════════════════════════════════════
